@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="edu.nyu.cloud.beans.UserProfile">
+		<id name="id" column="id" />
+		<property name="userName" column="USER_NAME" type="java.lang.String" />
+		<property name="userPassword" column="USER_PASSWORD" type="java.lang.String" />
+		<property name="userAddress" column="USER_ADDRESS" type="java.lang.String" />
+		<property name="firstName" column="FIRST_NAME" type="java.lang.String" />
+		<property name="lastName" column="LAST_NAME" type="java.lang.String" />
+		<property name="phoneNumber" column="PHONE_NUMBER" type="java.lang.String" />
+	</class>
+
+</hibernate-mapping>

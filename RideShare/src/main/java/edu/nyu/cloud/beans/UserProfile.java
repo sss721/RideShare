@@ -8,6 +8,8 @@ package edu.nyu.cloud.beans;
  */
 public class UserProfile {
 
+	
+	private final int id;
 	private final String userName;
 	private final String userPassword;
 	private final String userAddress;
@@ -25,9 +27,10 @@ public class UserProfile {
 	 * @param lastName
 	 * @param phoneNumber
 	 */
-	public UserProfile(String userName, String userPassword, String userAddress, String firstName, String lastName,
+	public UserProfile(int id,String userName, String userPassword, String userAddress, String firstName, String lastName,
 			String phoneNumber) {
 		super();
+		this.id = id;
 		this.userName = userName;
 		this.userPassword = userPassword;
 		this.userAddress = userAddress;
@@ -59,6 +62,13 @@ public class UserProfile {
 
 	public String getPhoneNumber() {
 		return phoneNumber;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
 	}
 	
 }
