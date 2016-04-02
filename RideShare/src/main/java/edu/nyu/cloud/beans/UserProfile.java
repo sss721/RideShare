@@ -1,5 +1,7 @@
 package edu.nyu.cloud.beans;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * This class is used to capture user information which will be captured during sign-up.
  * 
@@ -16,6 +18,9 @@ public class UserProfile {
 	private final String firstName;
 	private final String lastName;
 	private final String phoneNumber;
+	private final String aboutMe;
+	private AtomicInteger numberOfThumbsUp;
+	private AtomicInteger numberOfThumbsDown;
 
 	/**
 	 * Constructor
@@ -28,7 +33,7 @@ public class UserProfile {
 	 * @param phoneNumber
 	 */
 	public UserProfile(int id,String userName, String userPassword, String userAddress, String firstName, String lastName,
-			String phoneNumber) {
+			String phoneNumber, String aboutMe) {
 		super();
 		this.id = id;
 		this.userName = userName;
@@ -37,8 +42,33 @@ public class UserProfile {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
-		
+		this.aboutMe = aboutMe;
 	}
+
+	
+	public int getNumberOfThumbsUp() {
+		return numberOfThumbsUp.get();
+	}
+
+
+	public int incrementNumberOfThumsUp(){
+		return numberOfThumbsDown.incrementAndGet();
+	}
+
+
+	public int getNumberOfThumbsDown() {
+		return numberOfThumbsDown.get();
+	}
+
+	public int incrementNumberOfThumbsDown(){
+		return numberOfThumbsDown.decrementAndGet();
+	}
+
+
+	public String getAboutMe() {
+		return aboutMe;
+	}
+
 
 	public String getUserName() {
 		return userName;
