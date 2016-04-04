@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.nyu.cloud.service.beans.IncomingPoolRequest;
 
 /**
+ * This class represents the controller for the app.
+ * 
  * @author rahulkhanna
  * Date:04-Apr-2016
  */
