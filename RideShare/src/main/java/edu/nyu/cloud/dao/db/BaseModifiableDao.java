@@ -64,10 +64,24 @@ public interface BaseModifiableDao<T, E> extends BaseDatabaseDao<T, E> {
      */
     void mergeAll(List<T> listOfObjects);
 
+    /**
+     * This function is used to update the persistent object.
+     * @param e
+     */
     public void updatePersistent(E e);
 
+    /**
+     * This function is used to merge the persistent object.
+     * 
+     * @param e
+     */
     public void mergePersistent(E e);
 
+    /**
+     * This function is used to update all the given persistent objects.
+     * 
+     * @param listOfObjects of Persistent objects. 
+     */
     public void updateAllPersistent(List<E> listOfObjects);
 
     public void mergeAllPersistent(List<E> listOfObjects);
