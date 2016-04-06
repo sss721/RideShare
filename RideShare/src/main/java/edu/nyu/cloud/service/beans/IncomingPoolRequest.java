@@ -15,6 +15,10 @@ public class IncomingPoolRequest {
 	private final Date date;
 	private final String userId;
 
+	public IncomingPoolRequest(){
+		this(0,null,null,null,null);
+	}
+	
 	/**
 	 * @param numberOfPassengers
 	 * @param destination
