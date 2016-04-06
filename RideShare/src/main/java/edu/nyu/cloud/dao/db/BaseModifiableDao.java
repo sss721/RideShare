@@ -29,6 +29,12 @@ public interface BaseModifiableDao<T, E> extends BaseDatabaseDao<T, E> {
      */
     void save(T object);
 
+    /**
+     * This function is used to fetch the object based to primary key
+     * 
+     * @param key
+     * @return
+     */
     public Object get(Long key);
 
     /**
